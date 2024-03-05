@@ -184,9 +184,10 @@ header a{
 }
 
 
+
+
 .preview{
-    min-height: 670px;
-    max-height: 670px;
+    min-height: 100vh;
     padding: 15% 10vw 10% 10vw; 
     background-image: url("img/mainBack.png");
     background-repeat: no-repeat;
@@ -264,8 +265,7 @@ font-size: 7rem;
 
 .description{
     text-align: center;
-    min-height: 470px; 
-    max-height: 470px;
+    min-height: 80vh;
     padding: 5% 10vw 10% 10vw; 
 }
 .description .title{
@@ -294,9 +294,9 @@ font-size: 7rem;
     flex-wrap: wrap;
     border-radius: 5px;
     padding: 2%;
-    min-width: 45.5%;
-    max-width: 45.5%;
-    max-height: 45.5%;
+    min-width: 49.5%;
+    max-width: 49.5%;
+    max-height: 49%;
 }
 .description [class^="block-"]:nth-child(2n+1){
     margin-right: 1%;
@@ -331,5 +331,57 @@ font-size: 7rem;
 }
 .description [class^="block-"] .text{
     text-wrap: wrap;
+    font-size: 1.5rem;   
+}
+
+
+
+.question{
+    background-color: white;
+    color:white;
+    text-align: left;
+    min-height: 100vh;
+    padding: 5% 10vw 10% 10vw;
+
+}
+.question .text-container{
+    min-width: 65%;
+    max-width: 65%;
+    min-height: 40rem;
+    padding: 2em 30% 3em 3em;
+    border-radius: 15px;
+    background-color: #3d9af0;
+    margin: 0 -20% -35% 0 ;
+}
+.question .title{
+    text-wrap: wrap;
+    font-size: 3rem;
+    margin-bottom: 5%;
+}
+.question .subtitle{
+    max-width: 70%;
+    text-wrap: wrap;
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+.question button{
+    background-color: #3d9af0;
+    color: white;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 0.5em;
     font-size: 1.5rem;
+}
+.question button:hover{
+  background-color: white;
+  color: #3d9af0;
+  border:2px solid #3d9af0;
+}
+.question img{
+    border-radius: 15px;
+    min-width: 40%;
+    max-width: 40%;
+    min-height: 40%;
+    max-height: 40%;   
+    margin-left: 40%;
 }
