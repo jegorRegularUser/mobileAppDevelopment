@@ -1,0 +1,335 @@
+:root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 400px;
+    background-color: rgb(241, 238, 234);
+}
+*, ::after, ::before{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-width: 480px;
+}
+
+@media(min-width:1401px){
+
+    .preview{
+        grid-template-areas: 
+    "A  N N"
+    "A  C C"
+    "B  C C"
+    "B  C C"
+    "H  C C";
+    }
+    .preview .blocks{
+    grid-template-columns:  50% 50%;
+    grid-template-rows:  50% 50%;
+    grid-template-areas: 
+    "Q  T"
+    "D  F";
+    }      
+
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+    :root{
+        font-size: 15px;
+    }
+
+
+    .preview{
+        grid-template-areas: 
+    "A  N N"
+    "A  C C"
+    "B  C C"
+    "B  C C"
+    "H  C C";
+    }
+    .preview .blocks{
+    grid-template-columns:  50% 50%;
+    grid-template-rows:  50% 50%;
+    grid-template-areas: 
+    "Q  T"
+    "D  F";
+    }
+
+
+    .description{
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px){
+    :root{
+        font-size: 15px;
+    }
+
+    .preview{
+        grid-template-areas: 
+    "B B B"
+    "C C C"
+    "C C C"
+    "C C C"
+    "C C C";
+    }
+    .preview .blocks{
+    grid-template-columns:  50% 50%;
+    grid-template-rows:  50% 50%;
+    grid-template-areas: 
+    "Q  T"
+    "D  F";
+    }
+
+
+}
+@media (min-width: 576px) and (max-width: 767px){
+    :root{
+        font-size: 12px;
+    }
+
+    .preview{
+        grid-template-areas: 
+    "B B B"
+    "C C C"
+    "C C C"
+    "C C C"
+    "C C C";
+    }
+    .preview .blocks{
+    grid-template-columns:  50% 50%;
+    grid-template-rows:  50% 50%;
+    grid-template-areas: 
+    "Q  T"
+    "D  F";
+    }
+    .description .blocks{
+        flex-direction: column !important;
+        align-content: center !important;
+    }
+    .description [class^="block-"]{
+        margin: 0 0 5px 0 !important; 
+        min-width: 80% !important; 
+
+    }
+}
+@media (min-width: 480px) and (max-width: 575px){
+    :root{
+        font-size: 10px;
+    }
+
+
+    .preview{
+        grid-template-areas: 
+    "B B B"
+    "C C C"
+    "C C C"
+    "C C C"
+    "C C C";
+    }
+    .preview .blocks{
+    grid-template-columns:  70%;
+
+    grid-template-areas: 
+    "Q"
+    "T"
+    "D"
+    "F";
+    }
+    .description .blocks{
+        flex-direction: column !important;
+        align-content: center !important;
+    }
+    .description [class^="block-"]{
+        margin: 0 0 5px 0 !important;
+        min-width: 80% !important; 
+    }
+
+}
+
+
+    
+
+header{
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+
+    padding: 0 10vw; 
+    min-width: 100vw;
+    max-height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 20%;
+    background-image: url("img/smartphone.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+header ul{
+    width: 30%;
+    list-style: none;
+    display: flex;
+    justify-content:end;
+    padding: 0;
+}
+header li{
+    font-size: 1.5rem;
+    margin-right: 15%;
+}
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.preview{
+    min-height: 670px;
+    max-height: 670px;
+    padding: 15% 10vw 10% 10vw; 
+    background-image: url("img/mainBack.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: grid;
+    grid-gap: 5%; 
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.preview .title{
+font-size: 7rem;
+    border-radius: 5px;
+    grid-area: B;
+    color: rgb(230, 230, 230);
+    text-wrap: wrap;
+}
+.preview .blocks{
+    grid-area: C;
+    display: grid;
+    grid-gap: 1%; 
+    grid-auto-flow: dense;
+}
+.preview [class^="block-"]{
+    
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    color: white;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.preview .block-1{
+    grid-area: Q;
+}
+.preview .block-2{
+    grid-area: T;
+}
+.preview .block-3{
+    grid-area: D;
+}
+.preview .block-4{
+    grid-area: F;
+}
+.preview .icon{
+    min-width: 80%;
+    min-height: 60%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.block-1 .icon{
+    background-image: url("img/strategy.png");
+}
+.block-2 .icon{
+    background-image: url("img/curve.png");
+}
+.block-3 .icon{
+    background-image: url("img/coding.png");
+}
+.block-4 .icon{
+    background-image: url("img/search.png");
+}
+
+.preview .text{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+
+
+
+.description{
+    text-align: center;
+    min-height: 470px; 
+    max-height: 470px;
+    padding: 5% 10vw 10% 10vw; 
+}
+.description .title{
+    text-wrap: wrap;
+    font-size: 5rem;
+}
+.description .subtitle{
+    color: rgb(70, 70, 70);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
+    text-wrap: wrap;
+    font-size: 2rem;
+}
+.description .blocks{
+    min-height: 70%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.description [class^="block-"]{
+    background-color: white;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    padding: 2%;
+    min-width: 45.5%;
+    max-width: 45.5%;
+    max-height: 45.5%;
+}
+.description [class^="block-"]:nth-child(2n+1){
+    margin-right: 1%;
+}
+.description [class^="block-"]:not(:nth-last-child(-n+2)){
+    margin-bottom: 1%;
+}
+
+.description [class^="block-"] .icon{
+    border-radius: 20px;
+    background-image: url("img/check.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    min-width: 60px;
+    max-width: 60px;
+    min-height: 60px;
+    max-height: 60px;
+    margin-right: 2%;
+}
+
+.description [class^="block-"] .text-container{
+    min-width: 75%;
+    max-width: 75%;
+    min-height: 75%;
+    max-height: 75%; 
+}
+.description [class^="block-"] .title{
+    text-wrap: wrap;
+    font-size: 2rem;
+    margin-bottom: 3%;
+}
+.description [class^="block-"] .text{
+    text-wrap: wrap;
+    font-size: 1.5rem;
+}
